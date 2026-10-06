@@ -1,0 +1,180 @@
+#root {
+  width: 100%;
+  max-width: none;
+  min-height: 100vh;
+  border: 0;
+  text-align: left;
+}
+
+.app-shell {
+  box-sizing: border-box;
+  display: grid;
+  min-height: 100vh;
+  padding: 48px 24px;
+  place-items: center;
+  background:
+    radial-gradient(ellipse at top, rgba(37, 99, 235, 0.09), transparent 55%),
+    #f5f7fb;
+  color: #26334a;
+}
+
+.application-card {
+  box-sizing: border-box;
+  width: min(100%, 560px);
+  padding: 48px;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 20px 60px rgba(31, 45, 70, 0.09);
+}
+
+.app-mark {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 28px;
+  place-items: center;
+  border-radius: 14px;
+  background: #eaf1ff;
+  color: #2458c6;
+  font-size: 15px;
+  font-weight: 750;
+  letter-spacing: 0.04em;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: #5573ad;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.application-card h1 {
+  margin: 0;
+  color: #17243b;
+  font-size: clamp(30px, 6vw, 40px);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 1.15;
+}
+
+.intro {
+  margin: 16px 0 28px;
+  color: #68758b;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.gateway-button {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  border: 0;
+  border-radius: 10px;
+  background: #2458c6;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 650;
+  transition: background-color 150ms ease, transform 150ms ease;
+}
+
+.gateway-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  background: #1949ad;
+}
+
+.gateway-button:focus-visible {
+  outline: 3px solid rgba(36, 88, 198, 0.3);
+  outline-offset: 3px;
+}
+
+.gateway-button:disabled {
+  cursor: wait;
+  opacity: 0.72;
+}
+
+.gateway-panel {
+  margin-top: 32px;
+  padding: 20px;
+  border: 1px solid #e5eaf2;
+  border-radius: 12px;
+  background: #f9faff;
+}
+
+.gateway-panel-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.gateway-panel-heading h2 {
+  margin: 0;
+  color: #26334a;
+  font-size: 16px;
+  font-weight: 650;
+  letter-spacing: 0;
+}
+
+.status-indicator {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #9aa7bc;
+}
+
+.feedback {
+  margin: 12px 0 0;
+  color: #738097;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.error-message {
+  color: #b42318;
+}
+
+.gateway-details {
+  display: grid;
+  gap: 14px;
+  margin: 18px 0 0;
+}
+
+.gateway-details > div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.gateway-details dt {
+  color: #738097;
+  font-size: 14px;
+}
+
+.gateway-details dd {
+  margin: 0;
+  color: #26334a;
+  font-size: 14px;
+  font-weight: 650;
+  overflow-wrap: anywhere;
+  text-align: right;
+}
+
+.gateway-details .result-status {
+  color: #15803d;
+}
+
+@media (max-width: 520px) {
+  .app-shell {
+    padding: 24px 16px;
+  }
+
+  .application-card {
+    padding: 32px 24px;
+  }
+}
